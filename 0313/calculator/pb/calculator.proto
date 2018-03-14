@@ -1,0 +1,18 @@
+// op(1):lhs(4):rhs(4)
+
+// $ protoc calculator.proto --cpp_out=.
+/*
+message Calculator
+{
+	required int32 op  = 1;
+	required int32 lhs = 2;
+	required int32 rhs = 3;
+}
+*/
+message Calculator
+{
+	required fixed32 op  = 1;
+	required fixed32 lhs = 2;
+	required fixed32 rhs = 3;
+}
+
