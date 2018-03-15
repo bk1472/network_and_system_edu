@@ -48,7 +48,7 @@ int main()
 
 	combinable<long> sum;
 	parallel_for_each(arr.begin(), arr.end(), [&](int n) {
-			sum.local() += is_prime(n) ? n : 0;
+		sum.local() += is_prime(n) ? n : 0;
 	});
 
 	printf("timestamp: %dms\n", timestamp() - start);

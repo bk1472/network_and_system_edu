@@ -20,7 +20,6 @@
 //  Java: JDK5 - Concurrent Package
 //           8 - Stream API
 
-
 // 배열 안에 있는 소수의 합을 구하는 프로그램.
 //  1. 싱글 스레드 기반 검증
 //  2. 병렬화

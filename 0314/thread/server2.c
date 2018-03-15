@@ -27,7 +27,12 @@
 // 3. Nginx - Thread Pool Model
 //   => 고정 개수의 스레드만 생성한다.
 //      비동기의 요청을 처리하는 부분은 운영체제의 API를 이용한다.
+
 //      POSA - 더글라스 슈미트(Reactor / Proactor - ASIO)
+//       : ACE 라이브러리
+//         C++ Network Programming
+//         => Boost.Asio
+//            Poco
 
 // Web Server
 //   : 정적 리소스
@@ -44,9 +49,15 @@ struct client
 	// ...
 };
 
+
+// mutex
 static struct client clients[1024];
 static int client_count = 0;
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+// 자료 구조에 락을 사용하고 싶지 않다면
+//  => Lock free 자료 구조
+
 
 // 재귀적 락을 만들면 해결할 수 있다.
 //  => lock이 중첩되서 호출되서 데드락의 문제가 발생하는 것을 

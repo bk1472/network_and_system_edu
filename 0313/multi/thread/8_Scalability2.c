@@ -32,7 +32,6 @@ int timestamp()
 // map: 각각의 스레드가 연산을 수행한다.
 // reduce: 각 스레드의 결과를 병합한다.
 
-
 // 개인용 CPU: i3, i5, i7
 //  => 싱글 스레드 성능이 좋다.
 // 서버용 CPU: Xeon E5
@@ -123,6 +122,23 @@ void* foo(void* arg)
 8 threads, result: 100000000, 1565 ms
 16 threads, result: 100000000, 1526 ms
 32 threads, result: 100000000, 1521 ms
+#endif
+
+// Rx(Reactive Extension) - Netflix
+#if 0
+1 threads, result: 100000000, 142 ms
+2 threads, result: 100000000, 110 ms
+4 threads, result: 100000000, 65 ms
+8 threads, result: 100000000, 54 ms
+16 threads, result: 100000000, 50 ms
+32 threads, result: 100000000, 51 ms
+
+1 threads, result: 100000000, 130 ms
+2 threads, result: 100000000, 91 ms
+4 threads, result: 100000000, 59 ms
+8 threads, result: 100000000, 66 ms
+16 threads, result: 100000000, 47 ms
+32 threads, result: 100000000, 42 ms
 #endif
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;

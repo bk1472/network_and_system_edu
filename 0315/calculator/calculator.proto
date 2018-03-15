@@ -1,0 +1,13 @@
+// Client
+message Request
+{
+	required int32 lhs = 1;
+	required int32 rhs = 2;
+	required int32 op  = 3;
+}
+
+// Server
+message Response
+{
+	required int64 result = 1;
+}

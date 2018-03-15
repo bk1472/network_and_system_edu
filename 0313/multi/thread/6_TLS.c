@@ -16,6 +16,8 @@
 #include <stdio.h>
 #include <pthread.h>
 
+__thread int a;
+
 int next3times()
 {
 	static __thread int n = 0;

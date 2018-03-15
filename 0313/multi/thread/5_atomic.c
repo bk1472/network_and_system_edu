@@ -25,7 +25,7 @@
 
 // struct file
 typedef struct {
-	    int counter;
+	int counter;
 } atomic_t;
 
 atomic_t x = {0 };
