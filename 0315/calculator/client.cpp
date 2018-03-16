@@ -111,6 +111,8 @@ int main()
 					break;
 				}
 
+				printf("packetlen: %d\n", packetlen);
+
 				Response res;
 				res.ParseFromArray(buf, packetlen);
 				printf("result: %ld\n", res.result());

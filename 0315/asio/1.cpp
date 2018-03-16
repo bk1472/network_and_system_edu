@@ -33,16 +33,15 @@ using namespace boost::asio;
 
 int main()
 {
+	// io_service 
+	// 최신버전의 Asio 에서는 io_context 라는 이름으로 변경되었습니다.
+
 	io_service io;  // !
 	deadline_timer t(io, posix_time::seconds(5));
 
 	t.wait();
 	printf("Hello, Asio...\n");
 }
-
-
-
-
 
 
 

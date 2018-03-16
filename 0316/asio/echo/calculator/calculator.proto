@@ -1,0 +1,15 @@
+syntax = "proto3";
+// syntax = "proto2";
+// gRPC를 사용하기 위해서는 protobuf3를 사용해야 한다.
+
+message Request
+{
+	int32 lhs = 1;
+	int32 rhs = 2;
+}
+
+message Response
+{
+	int32 result = 1;
+}
+

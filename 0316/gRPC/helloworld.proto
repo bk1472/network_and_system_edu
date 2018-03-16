@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package helloworld;   // namespace helloworld
+
+service Greeter 
+{
+	rpc SayHello (Request) returns (Response) {}
+}
+
+message Request
+{
+	string name = 1;
+}
+
+message Response
+{
+	string message = 1;
+}
+
+// $ protoc --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` \
+//     helloworld.proto --grpc_out=.
+// $ protoc --cpp_out=. helloworld.proto

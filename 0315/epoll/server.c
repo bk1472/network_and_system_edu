@@ -14,7 +14,8 @@
 //   1. 사용자가 직접 관리하지 않고 사용할 수 있는
 //      저장소를 제공한다.
 //      epoll의 저장소를 생성해야 한다.
-//      epoll_create - deprecated
+//      epoll_create(size) - deprecated
+//      epoll_create1(0)
 
 //   2. 이벤트가 발생하면, (epoll_wait) 함수가 반환하면,
 //      이벤트가 발생한 디스크립터 배열을 반환한다.
